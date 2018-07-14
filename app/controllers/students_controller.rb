@@ -6,7 +6,11 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student 
+    @student
+  end
+
+  def activate
+    @student.update(active: !@student.active)
   end
 
   private
